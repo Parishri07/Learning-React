@@ -1,0 +1,74 @@
+body {
+    width: 300px;
+    font-family: Inter, sans-serif;
+}
+
+main{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 25px;    
+}
+
+.info-box{
+    text-align: center;
+}
+
+.info-box img{
+    width: 250px;
+    height: 200px;
+}
+
+.info-box h3{
+    margin-bottom: 0;
+}
+
+.info-box h6{
+    margin:0;
+    color: pink;
+}
+
+.btns{
+    display: flex;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.info-box button{
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 7px;
+    font-size: 13px;
+    align-items: center;
+    display: flex;
+}
+
+.email-btn{
+    color: black;
+    margin-right: 25px;
+}
+
+.linkedIn-btn{
+    background-color: #5093E2; 
+}
+
+.heading{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.text{
+    margin: 0;
+    font-size: 11px;
+}
+
+footer{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+footer svg{
+    margin-right: 20px;
+}
