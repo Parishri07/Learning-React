@@ -4,18 +4,20 @@ import Hero from "./components/Hero"
 import Card from "./components/Card"
 
 export default function App(){
+    const reviews = data.map((item)=>{
+        return (
+           <Card 
+              key= {item.id}
+              {...item}
+            /> 
+        )
+    })
+    
     return (
         <>
           <Navbar />
           <Hero />
-          <Card 
-            img="Katie-Zaferes.png" 
-            rating="5.0"
-            reviewCount={6}
-            country="USA"
-            title="Life Lessons with Katie Zaferes"
-            price={136}
-          />
+          {reviews}
         </>
     )
 }
