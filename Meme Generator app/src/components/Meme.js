@@ -9,6 +9,7 @@ export default function Meme() {
             bottomText: "",
             randomImage: "http://i.imgflip.com/lbij.jpg"
         });
+    // 'meme' is a state and setMeme is a function to change the state of the variable
     
     const [allMemesImages, setAllMemesImage] = React.useState(memesData)
     
@@ -21,6 +22,8 @@ export default function Meme() {
             randomImage: url
         }))
     }
+    // There are two ways to change the state of the variable, one way to directly pass the new value of the state to the setMeme function
+    // When we need to refer to the previous value of the state, we pass a callback where we take the previous value and return the updated value.
     
     return (
         <main>
