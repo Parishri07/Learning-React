@@ -37,10 +37,7 @@ export default function Meme() {
     )
 }
  
- const [boxes, setBoxes] = React.useState(boxesData)
- 
- const boxElements = boxes.map((box)=>{
-       return (
-           <div></div>
-       )     
- })
+//There are two ways of conditional rendering:
+ //1. Use {condition && (item to display)} - this is used in cases where to have to choose to display something or not based to the condition
+ //2. Use ternary operator - this is used when you have to choose between displaying one thing or other like you have two options to display based on the condition. If there are more than two options use if..else if
+//Only the && and ternary operator can be used directly in JSX, for if..else if and switch you need to create an object outside return()
