@@ -1,9 +1,8 @@
 import React from "react"
-import "../style.css"
 
-export default function MainContent() {
+export default function MainContent(props) {
    return (
-       <main>
+       <main className={props.mode}>
          <h1 className="main-title">Fun Facts about React</h1>
          <ul className="main-facts">
            <li>Was first released in 2013</li>
