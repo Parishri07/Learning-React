@@ -1,6 +1,6 @@
 body{
     background-color: black;
-    color: white;
+    /* color: white; */
     font-family: Inter, sans-serif;
     height: 100vh;
 }
@@ -25,8 +25,16 @@ body{
 }
 
 .nav-content{
-    color: #DEEBF8;
+    /* color: #DEEBF8; */
     font-weight: 600;
+}
+
+.dark{
+    color: white;
+}
+
+.light{
+   color: black;    
 }
 
 main{
@@ -34,7 +42,7 @@ main{
     background-image: url(./images/half-react-icon.png);
     background-repeat: no-repeat;
     background-position: right 75%;
-    background-size: 12%;
+    background-size: 25%;
 }
 
 .main-title{
@@ -54,5 +62,53 @@ main{
 
 .main-facts > li::marker{
     font-size: 1.4rem;  
-    color: #61DAFB;
+    /* color: #61DAFB; */
 }
+
+.toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      margin-left: 6px;
+    }
+    
+.slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 34px;
+      transition: .4s;
+    }
+    
+.slider:before {
+      position: absolute;
+      content: "";
+      height: 15px;
+      width: 15px;
+      left: 4px;
+      bottom: 3px;
+      background-color: white;
+      border-radius: 50%;
+      transition: .4s;
+    }
+    
+input:checked + .slider {
+      background-color: black;
+    }
+
+input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+input:checked + .slider:before {
+      transform: translateX(15px);
+    }
+    
+.changed{
+    background-color: #ccc; 
+}    
