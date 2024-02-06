@@ -9,6 +9,10 @@ export default function Meme() {
         });
     
     const [allMemes, setAllMemes] = React.useState([])
+
+        const count = React.useRef(0)
+       // across re-renders the value of reference variable is not changing
+       // the component re-renders on changing the state but not on changing the ref 
         
     React.useEffect(function (){
         // const res = await fetch("https://api.imgflip.com/get_memes")
@@ -29,6 +33,9 @@ export default function Meme() {
             ...prevMeme,
             randomImage: url
         }))
+              
+      count.current = count.current + 1
+      console.log("Meme number: " + count.current)
     }
     
     function handleChange(event){
