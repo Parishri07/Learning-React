@@ -68,7 +68,7 @@ export default function Meme() {
  //2. Use ternary operator - this is used when you have to choose between displaying one thing or other like you have two options to display based on the condition. If there are more than two options use if..else if
 //Only the && and ternary operator can be used directly in JSX, for if..else if and switch you need to create an object outside return()
  
- 
+ //Hooks - useState, useEffect, useRef
  
  
 
