@@ -10,8 +10,11 @@ export default function Meme() {
     
     const [allMemes, setAllMemes] = React.useState([])
 
-        const count = React.useRef(0)
-
+   const count = React.useRef(0)
+  // across re-renders the value of reference variable is not changing
+  // the component re-renders on changing the state but not on changing the ref 
+   
+    const btnRef = React.useRef()
         
     React.useEffect(function (){
         // const res = await fetch("https://api.imgflip.com/get_memes")
@@ -35,6 +38,10 @@ export default function Meme() {
               
       count.current = count.current + 1
       console.log("Meme number: " + count.current)
+
+      btnRef.current.style.backgroundColor = "purple"
+      btnRef.current.style.color = "white"
+      //the properties of the referenced item can be accessed directly without DOM manipulation
     }
     
     function handleChange(event){
@@ -53,7 +60,7 @@ export default function Meme() {
            <div className="form" >
            <input type="text" className="form-input" placeholder="Top Text" name="topText" value={meme.topText} onChange={handleChange}/>
            <input type="text" className="form-input" placeholder="Bottom Text" name="bottomText" value={meme.bottomText} onChange={handleChange}/>
-           <button className="form-button" onClick={getMemeImage} >Get a new meme image</button>
+           <button ref={btnRef} className="form-button" onClick={getMemeImage} >Get a new meme image</button>
            </div> 
            <div className="meme"> 
            <img src={meme.randomImage} className="meme-image" />
