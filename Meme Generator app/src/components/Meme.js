@@ -11,8 +11,7 @@ export default function Meme() {
     const [allMemes, setAllMemes] = React.useState([])
 
         const count = React.useRef(0)
-       // across re-renders the value of reference variable is not changing
-       // the component re-renders on changing the state but not on changing the ref 
+
         
     React.useEffect(function (){
         // const res = await fetch("https://api.imgflip.com/get_memes")
@@ -65,17 +64,7 @@ export default function Meme() {
     )
 }
 
- // There are two ways to change the state of the variable, one way to directly pass the new value of the state to the setMeme function
-// When we need to refer to the previous value of the state, we pass a callback where we take the previous value and return the updated value.
 
-//If we pass a function to the React.usState function then that state renders only once and not every time the component gets rendered.
-
-//There are two ways of conditional rendering:
- //1. Use {condition && (item to display)} - this is used in cases where to have to choose to display something or not based to the condition
- //2. Use ternary operator - this is used when you have to choose between displaying one thing or other like you have two options to display based on the condition. If there are more than two options use if..else if
-//Only the && and ternary operator can be used directly in JSX, for if..else if and switch you need to create an object outside return()
- 
- //Hooks - useState, useEffect, useRef
  
  
 
