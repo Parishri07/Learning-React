@@ -22,3 +22,5 @@ useEffect hooks
     The function it contains runs only after the User interface is printed on the screen
     The second parameter is the dependencies array. It checks the new value of array to the previous value of array anf if it is different, it will run the callback in useEffect
     If we keep it as empty it implies that the function will run only after first render
+
+useMemo hooks - they are used for memoization, which implies that is caches the expensive functions calls and reuses them the inputs to the function are same. It has two parameters one is function and another is dependencies array. It re-runs the function only when one of the dependencies in the dependencies array changes.
