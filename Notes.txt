@@ -1,24 +1,24 @@
- //Hooks - useState, useEffect, useRef
+ Hooks - useState, useEffect, useRef
 
-// There are two ways to change the state of the variable, one way to directly pass the new value of the state to the setMeme function
-// When we need to refer to the previous value of the state, we pass a callback where we take the previous value and return the updated value.
+There are two ways to change the state of the variable, one way to directly pass the new value of the state to the setMeme function
+When we need to refer to the previous value of the state, we pass a callback where we take the previous value and return the updated value.
 
-//If we pass a function to the React.usState function then that state renders only once and not every time the component gets rendered.
+If we pass a function to the React.usState function then that state renders only once and not every time the component gets rendered.
 
-//There are two ways of conditional rendering:
- //1. Use {condition && (item to display)} - this is used in cases where to have to choose to display something or not based to the condition
- //2. Use ternary operator - this is used when you have to choose between displaying one thing or other like you have two options to display based on the condition. If there are more than two options use if..else if
-//Only the && and ternary operator can be used directly in JSX, for if..else if and switch you need to create an object outside return()
+There are two ways of conditional rendering:
+ 1. Use {condition && (item to display)} - this is used in cases where to have to choose to display something or not based to the condition
+ 2. Use ternary operator - this is used when you have to choose between displaying one thing or other like you have two options to display based on the condition. If there are more than two options use if..else if
+Only the && and ternary operator can be used directly in JSX, for if..else if and switch you need to create an object outside return()
  
-// useRef hook - across re-renders the value of reference variable is not changing and the component re-renders on changing the state but not on changing the ref 
+useRef hook - across re-renders the value of reference variable is not changing and the component re-renders on changing the state but not on changing the ref 
 
- //event.preventDefault()
-        //if we dont use the ablove command, on submitting the form details will get erased and the values will be added as quereis in the url like below
-        // /index.html?firstName=jane&lastName=kui&email=12344%40gmail.com&comments=kiuyt&isFriendly=on&employment=full-time&favColor=black
+ event.preventDefault()
+        if we dont use the ablove command, on submitting the form details will get erased and the values will be added as quereis in the url like below
+        index.html?firstName=jane&lastName=kui&email=12344%40gmail.com&comments=kiuyt&isFriendly=on&employment=full-time&favColor=black
 
-//Cleanup function is a return function inside the useEffect hooks and it runs when the (WindowTracker) component is dismounted (i.e. when we toggle Window Tracker to hide the content)
+Cleanup function is a return function inside the useEffect hooks and it runs when the (WindowTracker) component is dismounted (i.e. when we toggle Window Tracker to hide the content)
 
-//useEffect hooks
-      //The function it contains runs only after the User interface is printed on the screen
-    //The second parameter is the dependencies array. It checks the new value of array to the previous value of array anf if it is different, it will run the callback in useEffect
-    // If we keep it as empty it implies that the function will run only after first render
+useEffect hooks
+    The function it contains runs only after the User interface is printed on the screen
+    The second parameter is the dependencies array. It checks the new value of array to the previous value of array anf if it is different, it will run the callback in useEffect
+    If we keep it as empty it implies that the function will run only after first render
