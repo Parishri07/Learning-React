@@ -1,7 +1,15 @@
 #Understanding React
 React components are class or a function that outputs an element tree. React components also take props as input.
 
-A component instance is the running, active version of a component that manages its own state and lifecycle. When you use a component in your JSX, React creates an instance of that component to handle its rendering and behavior. Instances have their own state and lifecycle methods. In functional components, use props, state and hooks to control instance behavior. In class components, use predefined methods like compoenentDidMount(), componentWillUnmount(){built-in lifecycle methods} and this keyword.
+A component instance is the running, active version of a component that manages its own state and lifecycle. When you use a component in your JSX, React creates an instance of that component to handle its rendering and behavior.Instances have their own state and lifecycle methods. 
+In functional components, use props, state and hooks to control instance behavior. In class components, use predefined methods like compoenentDidMount(), componentWillUnmount(){built-in lifecycle methods} and this keyword.
+
+Reconciliation -It is the process by which the framework keeps the user interface (UI) in sync with the underlying data (state). 
+Virtual DOM: React maintains an in-memory representation of the real DOM called the virtual DOM. It's lightweight and faster to manipulate than the real DOM.
+
+Diffing algorithm: Whenever there's a change in state, React creates a new virtual DOM representing the updated UI. The diffing algorithm compares the old and new virtual DOMs to identify the minimal set of changes needed in the real DOM.
+Key Steps:- root comparison, key-based comparison, recursive comparison, change categorization{insert, update, delete, rearrange}
+Longest Common Subsequence (LCS): This technique helps efficiently identify the largest unchanged portion of the tree, minimizing the number of updates needed.
 
 event.preventDefault()
 if we dont use the above command, on submitting the form details will get erased and the values will be added as quereis in the url like below
@@ -25,9 +33,11 @@ Cleanup function is a return function inside the useEffect hooks and it runs whe
 
 useRef hook - across re-renders the value of reference variable is not changing and the component re-renders on changing the state but not on changing the ref 
 
-useEffect hooks
-    The function it contains runs only after the User interface is printed on the screen
-    The second parameter is the dependencies array. It checks the new value of array to the previous value of array anf if it is different, it will run the callback in useEffect
-    If we keep it as empty it implies that the function will run only after first render
+useEffect hooks-
+Hooks like useEffect allow you to perform side effects such as making API calls, setting up subscriptions, or manipulating the DOM after the component renders or updates
+The function it contains runs only after the User interface is printed on the screen
+The second parameter is the dependencies array. It checks the new value of array to the previous value of array anf if it is different, it will run the callback in useEffect
+If we keep it as empty it implies that the function will run only after first render
 
-useMemo hooks - they are used for memoization, which implies that is caches the expensive functions calls and reuses them the inputs to the function are same. It has two parameters one is function and another is dependencies array. It re-runs the function only when one of the dependencies in the dependencies array changes.
+useMemo hooks - they are used for memoization, which implies that is caches the expensive functions calls and reuses them the inputs to the function are same.
+It has two parameters one is function and another is dependencies array. It re-runs the function only when one of the dependencies in the dependencies array changes.
