@@ -10,10 +10,13 @@ Virtual DOM: React maintains an in-memory representation of the real DOM called 
 Diffing algorithm: Whenever there's a change in state, React creates a new virtual DOM representing the updated UI. The diffing algorithm compares the old and new virtual DOMs to identify the minimal set of changes needed in the real DOM.
 Key Steps:- root comparison, key-based comparison, recursive comparison, change categorization{insert, update, delete, rearrange}
 Longest Common Subsequence (LCS): This technique helps efficiently identify the largest unchanged portion of the tree, minimizing the number of updates needed.
+Object.is() is used to compare previous and present objects.
 
 event.preventDefault()
 if we dont use the above command, on submitting the form details will get erased and the values will be added as quereis in the url like below
 index.html?firstName=jane&lastName=kui&email=12344%40gmail.com&comments=kiuyt&isFriendly=on&employment=full-time&favColor=black
+
+In javascript, functions are first-class citizens. The functions can be treated as any other values - you can assign a function to a variable, pass the function as an argument and return a function from another function.
 
 #States
 There are two ways to change the state of the variable, one way to directly pass the new value of the state to the setMeme function
@@ -34,10 +37,10 @@ Cleanup function is a return function inside the useEffect hooks and it runs whe
 useRef hook - across re-renders the value of reference variable is not changing and the component re-renders on changing the state but not on changing the ref 
 
 useEffect hooks-
-Hooks like useEffect allow you to perform side effects such as making API calls, setting up subscriptions, or manipulating the DOM after the component renders or updates
-The function it contains runs only after the User interface is printed on the screen
-The second parameter is the dependencies array. It checks the new value of array to the previous value of array anf if it is different, it will run the callback in useEffect
-If we keep it as empty it implies that the function will run only after first render
+Hooks like useEffect allow you to perform side effects such as making API calls, setting up subscriptions, or manipulating the DOM after the component renders or updates. The function it contains runs only after the User interface is printed on the screen. The second parameter is the dependencies array. It checks the new value of array to the previous value of array anf if it is different, it will run the callback in useEffect. If we keep it as empty it implies that the function will run only after first render. useEffect runs the function on change in dependencies array, it doesnot care how heavy the function it is. 
+Whereas to optimise the function execution, we can use useCallback or useMemo.
 
 useMemo hooks - they are used for memoization, which implies that is caches the expensive functions calls and reuses them the inputs to the function are same.
-It has two parameters one is function and another is dependencies array. It re-runs the function only when one of the dependencies in the dependencies array changes.
+It has two parameters one is function and another is dependencies array. It re-runs the function only when one of the dependencies in the dependencies array changes. Thus, if there is change in the dependencies array, useMemo executes the function and returns the output value. 
+Whereas in useCallback, if there is change in the dependencies array, it returns the function as it is without running it.
+
