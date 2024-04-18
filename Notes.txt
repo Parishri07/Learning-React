@@ -44,3 +44,6 @@ useMemo hooks - they are used for memoization, which implies that is caches the 
 It has two parameters one is function and another is dependencies array. It re-runs the function only when one of the dependencies in the dependencies array changes. Thus, if there is change in the dependencies array, useMemo executes the function and returns the output value. 
 Whereas in useCallback, if there is change in the dependencies array, it returns the function as it is without running it.
 
+#Others
+?. :- This is the optional chaining operator. It's used to safely access nested properties. If any of the properties in the chain are undefined or null, the entire expression evaluates to undefined instead of throwing an error.
+[dataset]: This uses bracket notation to access a property named dataset within the concepts variable. Bracket notation is useful when the property name is dynamic or contains special characters.
